@@ -1,8 +1,8 @@
-Código-fonte em LaTeX para ''Pense Python: Como Pensar Como um Cientista da Computação''
-Copyright (c) 2014 Allen B. Downey.
+% Código-fonte em LaTeX para ``Pense Python: Como Pensar Como um Cientista da Computação''
+% Copyright (c) 2014 Allen B. Downey.
 
-Licença: Creative Commons Atribuição-Não Comercial 3.0 Não Adaptada.
-http://creativecommons.org/licenses/by-nc/3.0/
+% Licença: Creative Commons Atribuição-Não Comercial 3.0 Não Adaptada.
+% http://creativecommons.org/licenses/by-nc/3.0/
 %
 
 %\documentclass[10pt,b5paper]{book}
@@ -10,10 +10,10 @@ http://creativecommons.org/licenses/by-nc/3.0/
 \usepackage[width=5.5in,height=8.5in,
   hmarginratio=3:2,vmarginratio=1:1]{geometry}
 
-Para alguns destes pacotes, você pode ter que instalar
-texlive-latex-extra (no Ubuntu)
+% Para alguns destes pacotes, você pode ter que instalar
+% texlive-latex-extra (no Ubuntu)
 
-\usepackage[portuges]{babel}                 idioma utilizado
+\usepackage[portuges]{babel}                 % idioma utilizado
 \usepackage[T1]{fontenc}
 \usepackage{textcomp}
 \usepackage{mathpazo}
@@ -23,10 +23,10 @@ texlive-latex-extra (no Ubuntu)
 \usepackage{amsmath}
 \usepackage{amsthm}
 %\usepackage{amssymb}
-\usepackage{exercise}                        texlive-latex-extra
+\usepackage{exercise}                       % texlive-latex-extra
 \usepackage{makeidx}
 \usepackage{setspace}
-\usepackage{hevea}                           
+\usepackage{hevea}
 \usepackage{upquote}
 \usepackage{appendix}
 \usepackage[bookmarks]{hyperref}
@@ -37,12 +37,12 @@ texlive-latex-extra (no Ubuntu)
 \newcommand{\theversion}{2.0.12}
 \newcommand{\thedate}{Fevereiro de 2014}
 
-estes estilos são traduzidos em CSS para a versão HTML
+% estes estilos são traduzidos em CSS para a versão HTML
 \newstyle{a:link}{color:black;}
 \newstyle{p+p}{margin-top:1em;margin-bottom:1em}
 \newstyle{img}{border:0px}
 
-alterar as setas
+% alterar as setas
 \setlinkstext
   {\imgsrc[ALT="Previous"]{back.png}}
   {\imgsrc[ALT="Up"]{up.png}}
@@ -57,7 +57,7 @@ alterar as setas
 
 \frontmatter
 
-PLASTEX SOMENTE
+% PLASTEX SOMENTE
 \ifplastex
     \usepackage{localdef}
     \maketitle
@@ -66,19 +66,19 @@ PLASTEX SOMENTE
 \newcommand*{\Anchor}[1]{%
   \@bsphack%
     \Hy@GlobalStepCount\anchorcnt%
-    \edef\@currentHref{anchor.\the\anchorcnt}
-    \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}
-    \M@gettitle{}\label{#1}
+    \edef\@currentHref{anchor.\the\anchorcnt}%
+    \Hy@raisedlink{\hyper@anchorstart{\@currentHref}\hyper@anchorend}%
+    \M@gettitle{}\label{#1}%
     \@esphack%
 }
 
 
 \else
-salta o seguinte trecho para plastex
+% salta o seguinte trecho para plastex
 
 \newtheorem{exercise}{Exercise}[chapter]
 
-LATEXONLY
+% LATEXONLY
 
 \input{latexonly}
 
@@ -89,7 +89,7 @@ LATEXONLY
 %\blankpage
 %\blankpage
 
-PÁGINAS DE TÍTULO PARA A VERSÃO LATEX
+% PÁGINAS DE TÍTULO PARA A VERSÃO LATEX
 
 %-falsa página de rosto----------------------------------------
 \thispagestyle{empty}
@@ -189,16 +189,16 @@ O código \LaTeX\para este livro está disponível em
 
 \vspace{0.2in}
 
-} finaliza o bloco small
+} % finaliza o bloco small
 
 \end{latexonly}
 
 
-HTMLONLY
+% HTMLONLY
 
 \begin{htmlonly}
 
-PÁGINA DE ROSTO PARA A VERSÃO HTML
+% PÁGINA DE ROSTO PARA A VERSÃO HTML
 
 {\Large \thetitle}
 
@@ -213,7 +213,7 @@ Versão \theversion
 \end{htmlonly}
 
 \fi
-FIM DO TRECHO QUE SALTA PARA PLASTEX
+% FIM DO TRECHO QUE SALTA PARA PLASTEX
 
 
 \chapter{Prefácio}
@@ -225,7 +225,7 @@ programação em Java. Eu havia lecionado a disciplina três vezes e comecei a f
 frustrado, pois o índice de fracasso nas turmas era muito alto e mesmo para
 estudantes que obtinham êxito, o nível de aprendizagem, no geral, era muito baixo.
 
-Um dos problemas que eu via eram os livros, que  
+Um dos problemas que eu via eram os livros, que
 eram enormes, continham muitos detalhes desnecessários sobre Java e
 sem orientação suficiente de fácil compreensão sobre como programar. Ainda todos eles
 sofriam do "efeito alçapão": eles começavam fáceis,
@@ -555,10 +555,10 @@ de Depuração e um erro de digitação no Capítulo 4.
 
 \item Wim Champagne encontrou uma confusão de palavras em um exemplo de dicionário.
 
-\item Douglas Wright chamou atenção para um problema com a divisão de base inteira
+\item Douglas Wright chamou atenção para um problema com a divisão de base
 {\tt arc}.
 
-\item Jared Spindor encontrou alguns entulhos no final de uma frase.
+\item Jared Spindor encontrou um pouco de entulho no final de uma frase.
 
 \item Lin Peiheng enviou uma série de sugestões muito úteis.
 
@@ -572,7 +572,7 @@ de Depuração e um erro de digitação no Capítulo 4.
 
 \item Mark E. Casida é é bom em localizar palavras repetidas.
 
-\item Scott Tyler preencheu um a que estava faltando. Em seguida, enviou
+\item Scott Tyler colocou um a que estava faltando. Em seguida, enviou
 um monte de correções.
 
 \item Gordon Shephard enviou várias correções, tudo em e-mails
@@ -580,17 +580,17 @@ separados.
 
 \item Andrew Turner {\tt detect}ou um erro no Capítulo 8.
 
-\item Adam Hobart corrigiu um problema com a divisão de inteiros {\tt arc}.
+\item Adam Hobart corrigiu um problema com a divisão de base {\tt arc}.
 
-\item Daryl Hammond e Sarah Zimmerman destacou que eu tratei do
+\item Daryl Hammond e Sarah Zimmerman destacou que tratei de
 {\tt math.pi} muito cedo. Zim localizou um erro de digitação.
 
-\item George Sass encontrado uma falha em uma seção de Depuração.
+\item George Sass encontrou uma falha em uma seção de Depuração.
 
-\item Brian Bingham sugeriu Exercício~\ref{exrotatepairs}.
+\item Brian Bingham sugeriu o Exercício~\ref{exrotatepairs}.
 
 \item Leah Engelbert-Fenton destacou que eu usei {\tt tuple}
-como um nome de variável, ao contrário do meu próprio conselho. E, em seguida, encontrou
+como um nome de variável contrário ao meu próprio conselho. Em seguida, encontrou
 um monte de erros de digitação e um ``uso antes de def.''
 
 \item Joe Funke localizou um erro de digitação.
@@ -605,7 +605,7 @@ um monte de erros de digitação e um ``uso antes de def.''
 
 \item Max Hailperin enviou em uma série de correções e
   sugestões. Max é um dos autores do extraordinário {\em
-    Concrete Abstractions/footnote{NT: Abstrações Concretas livro sem tradução ainda}}, que você pode querer ler quando você tiver
+    Concrete Abstractions/footnote{NT: Abstrações Concretas sem versão em português ainda}} que você pode querer ler quando você tiver
   terminado com este livro.
 
 \item Chotipat Pornavalai encontrou um erro em uma mensagem de erro.
@@ -629,18 +629,18 @@ de uma ``instância'' e vários outros erros.
 degenerados.
 
 \item Anurag Goel sugeriu uma outra solução para \verb"is_abecedarian"
-e enviou algumas correções adicionais. E ele sabe como
+e enviou algumas correções adicionais. Ele sabe como
 soletrar Jane Austen.
 
 \item Kelli Kratzer localizou um dos erros de digitação.
 
-\item Mark Griffiths apontou um exemplo confuso no Capítulo 3.
+\item Mark Griffiths destacou um exemplo confuso no Capítulo 3.
 
 \item Roydan Ongie encontrou um erro no meu método de Newton.
 
 \item Patryk Wolowiec me ajudou com um problema na versão HTML.
 
-\item Mark Chonofsky me contou sobre uma nova palavra-chave no Python 3.
+\item Mark Chonofsky me informou sobre uma nova palavra-chave no Python 3.
 
 \item Russell Coleman me ajudou com minha geometria.
 
@@ -653,15 +653,15 @@ Decorator, mas não o mencionou pelo nome.
 
 \item St\'{e}phane Morin enviou várias correções e sugestões.
 
-\item Paul Stoop corrigido um erro de digitação em \verb+uses_only+.
+\item Paul Stoop corrigiu um erro de digitação em \verb+uses_only+.
 
-\item Eric Bronner apontou uma confusão na discussão da
+\item Eric Bronner salientou uma confusão na discussão da
 ordem das operações.
 
-\item Alexandros Gezerlis definiu um novo padrão para o número e
-qualidade de sugestões que apresentou. Estamos profundamente gratos!
+\item Alexandros Gezerlis montou um novo padrão para o número e
+qualidade de sugestões que ele apresentou. Estamos profundamente gratos!
 
-\item Gray Thomas conhece o sua direita a partir de sua esquerda.
+\item Gray Thomas conhece a sua direita a partir de sua esquerda.
 
 \item Giovanni Escobar Sosa enviou uma longa lista de correcções e
 sugestões.
@@ -670,17 +670,17 @@ sugestões.
 
 \item Kuang He encontrou um erro de digitação.
 
-\item Daniel Neilson corrigido um erro sobre a ordem das operações.
+\item Daniel Neilson corrigiu um erro sobre a ordem das operações.
 
 \item Will McGinnis destacou que {\tt polyline} foi definida
 de forma diferente em dois lugares.
 
-\item Swarup Sahoo localizou um ponto e vírgula em falta.
+\item Swarup Sahoo localizou a falta de um ponto e vírgula.
 
-\item Frank Hecker destacou um exercício que foi sub-especificado, e
+\item Frank Hecker destacou um exercício que foi sub-especificado e
 alguns links quebrados.
 
-\item Animesh B me ajudou a limpar um exemplo confuso.
+\item Animesh B me ajudou a enxugar um exemplo confuso.
 
 \item Martin Caspersen encontrou dois erros de arredondamento.
 
@@ -690,7 +690,7 @@ alguns links quebrados.
 
 \item Carlos Tafur enviou uma página de correções e sugestões.
 
-\item Martin Nordsletten encontrou uma falha em uma solução de exercício.
+\item Martin Nordsletten encontrou um bug em uma solução de exercício.
 
 \item Lars O.D. Christensen encontrou uma referência quebrada.
 
@@ -706,17 +706,17 @@ em Python 3.
 
 \item Matthew Shultz me informou sobre um link quebrado.
 
-\item Lokesh Kumar me informou sobre alguns links quebrados e
+\item Lokesh Kumar me comunicou sobre alguns links quebrados e
 alterações nas mensagens de erro.
 
-FIMCOLABORARES
+% FIMCOLABORARES
 
 \end{itemize}
 
 \normalsize
 \clearemptydoublepage
 
-ÍNDICE
+% ÍNDICE
 \begin{latexonly}
 
 \tableofcontents
@@ -725,7 +725,7 @@ FIMCOLABORARES
 
 \end{latexonly}
 
-INÍCIO DO LIVRO
+% INÍCIO DO LIVRO
 \mainmatter
 
 \chapter{O caminho do programa}
@@ -1370,8 +1370,8 @@ mas é bom saber onde ele está.
 
 \begin{} exercício
 
-Inicie o interpretador Python e tipo {\tt ajuda ()} para iniciar a linha
-ajudar a utilidade. Ou você pode digitar \verbo "help ('print')" para obter informações
+Inicie o interpretador Python e tipo {\ttajuda()} para iniciar a linha
+ajudar a utilidade. Ou você pode digitar \verb"help('print')" para obter informações
 sobre o {\tt print} comunicado.
 
 Se este exemplo não funciona, você
@@ -3716,7 +3716,7 @@ Faça o download do código neste capítulo de
 \index{diagrama de pilha}
 
 \item Desenhe um diagrama de pilha que mostra o estado do programa
-durante a execução {círculo tt \(bob, raio)}. Você pode fazer o
+durante a execução {\tt círculo (bob, raio)}. Você pode fazer o
 aritmética à mão ou adicionar {\tt impressão} declarações ao código.
 
 \item A versão do {\tt arco} na Seção ~ \ref {} não é refatoração
@@ -4427,7 +4427,7 @@ executa divisão em ponto flutuante, mesmo com operandos inteiros.
 
 \begin{description}
 
-\[Operador módulo:] item de um operador, indicadas com um sinal de porcentagem
+\item[Operador módulo:] item de um operador, indicadas com um sinal de porcentagem
 ({\tt \%}), que trabalha com números inteiros e retorna o resto quando um
 número é dividido por um outro.
 \index{operador módulo}
@@ -4453,7 +4453,7 @@ execução dependendo de alguma condição.
 que determina qual ramo é executado.
 \index{condição}
 
-\[Instrução composta:] item A afirmação de que consiste de um cabeçalho
+\item[Instrução composta:] item A afirmação de que consiste de um cabeçalho
 e um corpo. O cabeçalho termina com dois pontos (:). O corpo é recortado
 em relação ao cabeçalho.
 \index{instrução composta}
@@ -5039,7 +5039,7 @@ a coisa a ser definida. Uma verdadeira definição circular não é muito
 
 Se você viu que a definição no dicionário, você pode ser aborrecido. Em
 Por outro lado, se você olhou a definição do fatorial
-função, denotada com o símbolo $! $, que você pode obter algo como
+função, denotada com o símbolo $!$, que você pode obter algo como
 este:
 %
 \begin{eqnarray *}
@@ -5048,10 +5048,10 @@ este:
 \end{eqnarray *}
 %
 Esta definição diz que o fatorial de 0 é 1, eo fatorial
-de qualquer outro valor, $ n $, é de US $ n $ multiplicado pelo fatorial de $ n-1 $.
+de qualquer outro valor, $ n $, é de US $ n $ multiplicado pelo fatorial de $n-1$.
 
-Portanto, US $ 3! $ É 3 vezes US $ 2! $, Que é 2 vezes um dólar! $, Que é 1 vezes
-$ 0! $. Juntando tudo, $ 3! $ Equivale a 3 vezes 2 vezes 1 vezes 1,
+Portanto, $3!$ É 3 vezes $2!$, Que é 2 vezes $1!$, Que é 1 vezes
+$0!$. Juntando tudo, $3!$ Equivale a 3 vezes 2 vezes 1 vezes 1,
 o qual é 6.
 \index{função fatorial}
 \index{function! Fatorial}
@@ -5166,7 +5166,7 @@ funções eram bons programadores.
 
 O mesmo é verdadeiro quando você chamar um dos suas próprias funções. Para
 exemplo, na Seção ~ \ref {boolean}, escrevemos uma função chamada 
-\Verb "is_divisible" que determina se um número é divisível por
+\verb"is_divisible" que determina se um número é divisível por
 outro. Uma vez que nós nos convencemos que esta função é
 correto --- através da análise do código e os testes --- podemos usar a função
 sem olhar para o corpo novamente.
@@ -5284,7 +5284,7 @@ Nenhum
 Fatorial não está definido para inteiros negativos.
 Nenhum
 \end{verbatim}
-
+% 
 Se passarmos pelas duas checagens, então sabemos que $ n $ é positivo ou
 zero, para que possamos provar que a recursão termina.
 \index{padrão guardião}
@@ -5295,12 +5295,12 @@ As duas primeiras condicionais atuam como guardiãs, protegendo o código que
 seguida de valores que possam causar um erro. Os guardiões torná-lo
 possível comprovar a correção do código.
 
-Na Seção ~ \ref {} raise veremos uma alternativa mais flexível para impressão
+Na Seção ~ \ref{raise} veremos uma alternativa mais flexível para impressão
 uma mensagem de erro: levantar uma exceção.
 
 
-\section{} Depuração
-\label{} factdebug
+\section{Depuração}
+\label{factdebug}
 
 Quebrando um grande programa em funções menores cria naturais
 checkpoints para depuração. \index{depuração}
