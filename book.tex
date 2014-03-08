@@ -297,16 +297,16 @@ O resultado é este livro, agora com o título menos grandioso
   soluções para a maior parte deles.
 
 \item Adicionei uma série de estudos de caso---exemplos mais extensos com
-  exercícios, soluções e argumentações. Alguns deles são baseados no
-  Swampy, um conjunto de programas em Python que escrevi para usar em minhas aulas.
-  O Swampy, os exemplos de código e algumas respostas estão disponíveis em
-  \url{http://thinkpython.com}.
-  
-\item Ampliei a discussão sobre planos de desenvolvimento de programas
-  e sobre padrões básico de esboço de projeto.
+exercícios, soluções e argumentações. Alguns deles são baseados no
+Swampy, um conjunto de programas em Python que escrevi para usar em minhas aulas.
+O Swampy, os exemplos de código e algumas respostas estão disponíveis em
+\url{http://thinkpython.com}.
 
-\item Adicionei os apêndices sobre depuração, análise de algoritmos e
-  diagramas UML com Lumpy.
+\item Ampliei a discussão sobre planos de desenvolvimento de programas
+ e sobre padrões básico de esboço de projeto.
+
+\item Adicionei os apêndices sobre depuração, análise de algoritmos e diagramas
+UML com Lumpy.
 
 \end{itemize}
 
@@ -418,7 +418,7 @@ ser alterada para ``subconscientemente".
 3.10.
 
 \item Matthew J. Moelter tem sido um colaborador de longa data que enviou
-inúmeras correções e sugestões para o livro.  
+inúmeras correções e sugestões para o livro.
 
 \item Simon Dicon Montford relatou uma definição de função omitida e
 diversos erros de digitação no Capítulo 3. Ele também encontrou erros na
@@ -604,9 +604,9 @@ um monte de erros de digitação e um ``uso antes de def.''
 \item Gregg Lind e Abigail Heithoff sugeriu o Exercício~\ref{checksum}.
 
 \item Max Hailperin enviou em uma série de correções e
-  sugestões. Max é um dos autores do extraordinário {\em
-    Concrete Abstractions/footnote{NT: Abstrações Concretas sem versão em português ainda}} que você pode querer ler quando você tiver
-  terminado com este livro.
+sugestões. Max é um dos autores do extraordinário {\em
+Concrete Abstractions/footnote{NT: Abstrações Concretas sem versão em português ainda}} que você pode querer ler quando você tiver
+terminado com este livro.
 
 \item Chotipat Pornavalai encontrou um erro em uma mensagem de erro.
 
@@ -730,78 +730,78 @@ alterações nas mensagens de erro.
 
 \chapter{O caminho do programa}
 
-O objetivo deste livro é ensinar a pensar como um
+O objetivo deste livro é ensinar você a pensar como um
 cientista da computação. Esta maneira de pensar combina algumas das melhores características
-da matemática, engenharia e ciências naturais. Como os matemáticos,
-cientistas da computação usam linguagens formais para representar idéias (especificamente
-cálculos). Como engenheiros, eles projetam coisas, montando componentes
-em sistemas e compensações avaliando entre alternativas. Como os cientistas,
-eles observam o comportamento de sistemas complexos, formulam hipóteses e teste
+da matemática, da engenharia e das ciências naturais. Como matemáticos,
+cientistas da computação usam linguagens formais para representar ideias (especificamente
+computação). Como engenheiros, eles projetam coisas, reunindo componentes
+em sistemas e avaliando compensações entre alternativas. Como cientistas,
+eles observam o comportamento de sistemas complexos, formulam hipóteses e testam
 previsões.
 \index{resolução de problemas}
 
-A habilidade mais importante para um cientista da computação é {\bf
-resolução de problemas}. A resolução de problemas, a capacidade de formular
-problemas, pensar criativamente sobre soluções possíveis e expressar uma solução de forma clara
-e com precisão. Como se vê, o processo de aprender a programar é uma
+A única habilidade mais importante para um cientista da computação é a {\bf
+resolução de problemas}. Resolução de problemas significa a capacidade de formular
+problemas e pensar criativamente sobre soluções, além de expressá-las de forma clara
+e precisa. Como se vê, o processo de aprender a programar é uma
 excelente oportunidade para praticar as habilidades de resolução de problemas. É por isso que
-Neste capítulo é chamado, `` O caminho do programa.''
+este capítulo é chamado de ``O caminho do programa.''
 
-Em um nível, você vai aprender a programar, um útil
+Em um nível, você vai aprender a programar, uma útil
 habilidade por si só. Em outro nível, você usará a programação como um meio para
-fim. À medida que avançamos, que fim vai ficar mais claro.
+um fim. À medida que avançamos, este fim se tornará mais claro.
 
-\section {A linguagem de programação Python}
-\index {linguagem de programação}
-\index {língua! Programação}
+\section{A linguagem de programação Python}
+\index{linguagem de programação}
+\index{língua!programação}
 
-A linguagem de programação que você vai aprender é Python. Python é
-um exemplo de uma {\bf de alto nível linguagem}; outras linguagens de alto nível
-que você pode ter ouvido falar de são C, C + +, Perl e Java.
+A linguagem de programação que você vai aprender é a Python. Python é
+um exemplo de uma {\bf linguagem de alto nível}; outras linguagens de alto nível
+que você pode ter ouvido falar de são C, C++, Perl e Java.
 
-Tem
-também {\bf de baixo nível línguas}, por vezes referido como `` máquina
-línguas'' ou `` linguagens assembly.'' falando livremente, computadores
-só pode executar programas escritos em linguagens de baixo nível. Assim
+Há
+também {\bf línguagens de baixo nível}, algumas vezes referidas como `` linguagem de
+máquina'' ou ``linguagens de montagem.'' Exprimindo a grosso modo, computadores
+só podem executar programas escritos em linguagens de baixo nível. Assim,
 programas escritos em uma linguagem de alto nível tem que ser processados ​​antes
-eles podem executar. Este processamento adicional leva algum tempo, que é um pequeno
-desvantagem de linguagens de alto nível.
-\index{} portabilidade
+deles poderemm rodar. Este processamento adicional leva algum tempo, o que é uma pequena
+desvantagem das linguagens de alto nível.
+\index{portabilidade}
 \index{linguagem de alto nível}
 \index{linguagem de baixo nível}
-\index{língua! Alto nível}
-\index{língua! Baixo nível}
+\index{línguagem!alto nível}
+\index{línguagem!baixo nível}
 
 As vantagens são enormes. Em primeiro lugar, é muito mais fácil de programar
 em uma linguagem de alto nível. Programas escritos em uma linguagem de alto nível
-levam menos tempo para escrever, eles são mais curtos e mais fáceis de ler, e eles
-são mais propensos a ser corretas. Em segundo lugar, as linguagens de alto nível são {\bf
-portátil}, o que significa que eles podem ser executados em diferentes tipos de computadores
-com poucas ou nenhuma modificação. Programas de baixo nível pode ser executado em apenas um
-tipo de computador e tem que ser reescrito para rodar em outro.
+levam menos tempo para se escrever. Eles são mais curtos, mais fáceis de ler e
+são mais propensos a serem corretos. Em segundo lugar, as linguagens de alto nível são {\bf
+portáveis}, o que significa que eles podem ser executados em diferentes tipos de computadores
+com pouca ou nenhuma modificação. Programas de baixo nível podem ser executados em apenas um
+tipo de computador e têm que ser reescritos para rodarem em outro tipo.
 
-Devido a essas vantagens, quase todos os programas são escritos em alto nível
-línguas. Linguagens de baixo nível são utilizados apenas para alguns especializado
-aplicações.
-\index{} compilar
+Devido a estas vantagens, quase todos os programas são escritos em linguagem de alto
+nível. Linguagens de baixo nível são utilizadas apenas para algumas aplicações
+especializadas.
+\index{compilar}
 \index{interpretar}
 
-Dois tipos de programas processam linguagens de alto nível em baixo nível
-idiomas: {\bf intérpretes} e {\bf compiladores}. Um intérprete
-lê um programa de alto nível eo executa, o que significa que ele faz o que
+Dois tipos de programas processam linguagens de alto nível em linguagens baixo
+nível: {\bf intérpretadores} e {\bf compiladores}. Um interpretador
+lê um programa de alto nível e o executa, o que significa que ele faz o que
 o programa diz. Ele processa o programa um pouco de cada vez,
-alternadamente ler linhas e realizar cálculos.
-Figura ~ \ref {fig.interpret} mostra a estrutura de um intérprete.
-\{Código fonte} índice
+alternadamente ler linhas e executa computações.
+Figura~ \ref{fig.interpret} mostra a estrutura de um interpretador.
+\index{código fonte}
 \index{código objeto}
 \index{executável}
 
 \begin{figure}
 \centerline
-{\includegraphics[scale = 0.9] {figos / interpret.pdf}}
-\caption{Um intérprete processa o programa um pouco de cada vez,
-alternadamente ler linhas e realizar cálculos.}
-\label{} fig.interpret
+{\includegraphics[scale=0.9]{figs/interpret.pdf}}
+\caption{Um interpretador processa o programa um pouco de cada vez,
+alternadamente ler linhas e executa computações.}
+\label{fig.interpret}
 \end{figure}
 
 Um compilador lê o programa eo traduz completamente antes de o
