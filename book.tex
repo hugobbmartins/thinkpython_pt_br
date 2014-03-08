@@ -804,25 +804,25 @@ alternadamente ler linhas e executa computações.}
 \label{fig.interpret}
 \end{figure}
 
-Um compilador lê o programa eo traduz completamente antes de o
-programa começa a funcionar. Neste contexto, o programa de alto nível é
-o chamado código fonte {\bf}, e o programa traduzido é chamado o
-{\bf objeto de código} ou {o executável \bf}. Uma vez que é um programa
-compilado, você pode executá-lo repetidamente, sem mais a tradução.
-Figura ~ \ref {fig.compile} mostra a estrutura de um compilador.
+Um compilador lê o programa e o traduz completamente antes de o
+programa começa a rodar. Neste contexto, o programa de alto nível é
+o chamado de {\bf código fonte}, e o programa traduzido é chamado o
+{\bf código objeto} ou {\bf executável}. Uma vez que um programa é
+compilado você pode executá-lo repetidamente, sem nova tradução.
+Figura~\ref{fig.compile} mostra a estrutura de um compilador.
 
 \begin{figure}
 \centerline
-{\includegraphics[scale = 0.9] {figos / compile.pdf}}
-\caption{Um compilador traduz o código fonte em código objeto, que é
-dirigido por um executor hardware.}
-\label{} fig.compile
+{\includegraphics[scale=0.9]{figs/compile.pdf}}
+\caption{Um compilador traduz o código fonte em código objeto, o qual é
+rodado por um hardware executor.}
+\label{fig.compile}
 \end{figure}
 
-Python é considerada uma linguagem interpretada, porque os programas em Python
-são executadas por um intérprete. Há duas maneiras de usar o
-intérprete: {modo interativo bf \} e {modo script \bf}. Em
-modo interativo, você digita programas em Python eo interpretador exibe
+Python é considerada uma linguagem interpretada, porque os programas desta linguagem
+são executados por um interpretador. Há duas maneiras de usar o
+interpretador: {\bf modo interativo} e {\bf modo script}. No
+modo interativo, você digita os programas em Python e o interpretador exibe
 o resultado:
 \index{modo interativo}
 \index{modo de script}
@@ -832,46 +832,47 @@ o resultado:
 2
 \end{verbatim}
 %
-A Chevron, \verb ">>>", é o
-{Perguntar \bf} o intérprete utiliza para indicar que ele está pronto. Se
-você digita {\tt 1 + 1}, as respostas intérprete {\tt 2}.
-\index{indicador}
+A tripla bifurcação, \verb">>>", é o sinal de prontidão ou
+{\bf prompt} que o interpretador utiliza para indicar que ele está pronto. Se
+você digitar {\tt 1 + 1}, o interpretador responde {\tt 2}.
+\index{prompt}
+\index{sinal de prontidão}
 
-Alternativamente, você pode armazenar o código em um arquivo e usar o interpretador para
-executar o conteúdo do arquivo, que é chamado de {script \bf}. Por
-convenção, scripts Python têm nomes que terminam com {\tt. py}.
-\index{} roteiro
+Como alternativa, você pode armazenar o código em um arquivo e usar o interpretador para
+executar o conteúdo do arquivo, que é chamado de {\bf script}. Por
+convenção os scripts Python têm nomes que terminam com {\tt .py}.
+\index{script}
 
 Para executar o script, você tem que dizer ao interpretador o nome do
 o arquivo. Se você tem um script chamado {\tt dinsdale.py} e você está
 trabalhando em uma janela de comandos UNIX, você digita {\tt python
 dinsdale.py}. Em outros ambientes de desenvolvimento, os detalhes
 scripts de execução são diferentes. Você pode encontrar instruções para
-seu ambiente no Python site \url{http://python.org}.
-\index{teste de modo interativo!}
+seu ambiente no site do Python \url{http://python.org.br}.
+\index{modo interativo!teste}
 
-Trabalhando no modo interativo é conveniente para testar pequenos pedaços de
+Operando no modo interativo é conveniente para testar pequenos pedaços de
 código, pois você pode digitar e executá-los imediatamente. Mas para
-nada mais do que algumas linhas, você deve salvar o seu código
+qualquer coisa maior do que algumas linhas, você deve salvar o seu código
 como um script para que você possa modificar e executá-lo no futuro.
 
 
 \section{O que é um programa?}
 
-A {programa \bf} é uma seqüência de instruções que especifica como
-execute um cálculo. O cálculo pode ser algo
+Um {\bf programa} é uma seqüência de instruções que especifica como
+realizar uma computação. A computação pode ser algo
 matemático, como solucionar um sistema de equações ou encontrar a
 raízes de uma polinomial, mas também pode ser uma computação simbólica, tais
-como a busca e substituição de texto em um documento ou (estranhamente)
+como busca e substituição de texto em um documento ou (por estranho que seja)
 compilar um programa.
 \index{programa}
 
-Os detalhes são diferentes em diferentes línguas, mas alguns básico
-instruções aparecem em quase todas as línguas:
+Os detalhes são diferentes em diferentes linguagens, mas algumas instruções
+básicas estão presentes em quase todas as linguagens:
 
 \begin{description}
 
-\item[entrada]: Obter dados do teclado, de um arquivo, ou algum
+\item[entrada:] Obter dados do teclado, de um arquivo, ou de algum
 outro dispositivo.
 
 \item[saída:] Exibir dados na tela ou enviar dados para um
@@ -880,7 +881,7 @@ arquivo ou outro dispositivo.
 \item[matemática]: Executar operações matemáticas básicas, como adição e
 multiplicação.
 
-\item[execução condicional:] Verificar a existência de certas condições e
+\item[execução condicional:] Verificar certas condições e
 executar o código apropriado.
 
 \item[repetição]: Executar alguma ação repetidamente, normalmente com
@@ -888,111 +889,113 @@ alguma variação.
 
 \end{description}
 
-Acredite ou não, isso é praticamente tudo o que existe para ela. Cada
-programa que você já usou, não importa quão complicado, é composta de
-instruções que se parecem muito com estes. Então você pode pensar
-programação como o processo de dividir uma tarefa grande e complexa
-em subtarefas menores e menores até que as subtarefas são
-suficientemente simples para ser realizado com uma dessas instruções básicas.
+Acredite ou não, isso é praticamente tudo o que existe. Todo
+programa que você já usou, não importa quão complicado, é composto de
+instruções que se parecem muito com essas mostradas. Então você pode pensar
+a programação como o processo de dividir uma tarefa grande e complexa
+em subtarefas cada vez menores até que as subtarefas sejam
+suficientemente simples para serem realizadas com uma dessas instruções básicas.
 \index{algoritmo}
 
-Isso pode ser um pouco vaga, mas nós vamos voltar a este tópico
-quando falamos de {\bf algoritmos}.
+Isso pode ser um pouco vago, mas nós voltaremos a este tópico
+quando falarmos de {\bf algoritmos}.
 
 \section{O que é depuração?}
 \index{depuração}
+\index{falha}
 \index{bug}
 
-A programação é passível de erro. Por razões, erros de programação caprichosos
-são chamados de erros {\bf} eo processo de rastreá-los é chamado
+A programação é propícia a erros. Por capricho, erros de programação
+são chamados de {\bf bugs} e o processo de rastreá-los é chamado
 {\bf depuração}.
 \index{depuração}
 \index{bug}
 
-Três tipos de erros podem ocorrer em um programa: erros de sintaxe, de tempo de execução 
-erros, e erros de semântica. É útil
-distingui-las, a fim de encontrá-los mais rapidamente.
+Três tipos de erros podem ocorrer em um programa: erros de sintaxe, erros
+em tempo de execução, e erros de semântica. É útil
+distingui-los, a fim de encontrá-los mais rapidamente.
 
-\{Os erros de sintaxe} subseção
+\subsection{Erros de sintaxe}
 \index{erro de sintaxe}
-\index{erro! Sintaxe}
+\index{sintaxe!erro de}
 \index{mensagem de erro}
 
-Python só pode executar um programa, se a sintaxe é
-corrigir, caso contrário, o intérprete exibe uma mensagem de erro.
-{\bf} Sintaxe se refere à estrutura de um programa e as regras sobre
-essa estrutura. \index{} sintaxe
-Por exemplo, os parênteses têm que vir em pares, de modo
-{\tt (1 + 2)} é legal, mas {\tt 8)} é um erro de sintaxe {\bf}.
-\index{parênteses! Correspondência}
-\index{} sintaxe
-\index{cummings, ee}
+Python só pode executar um programa se a sintaxe for
+correta, caso contrário, o interpretador exibe uma mensagem de erro.
+{\bf Sintaxe} se refere à estrutura de um programa e as regras sobre
+essa estrutura.
+Por exemplo, os parênteses têm que vir em pares, de modo que
+{\tt (1 + 2)} é válido, mas {\tt 8)} é um {\bf erro de sintaxe}.
+\index{sintaxe}
+\index{parênteses!correspondência entre}
+\index{sintaxe}
+\index{cummings, e. e.}
 
-Em leitores ingleses podem tolerar a maioria dos erros de sintaxe, que é por isso que
-pode ler a poesia de ee cummings sem cuspir mensagens de erro.
-Python não é tão indulgente. Se não houver um único erro de sintaxe
-em qualquer lugar em seu programa, Python vai exibir uma mensagem de erro e sair,
-e você não será capaz de executar o programa. Durante os primeiros
+Na línguagem escrita, os leitores podem tolerar a maioria dos erros de sintaxe, ao qual é por isso que
+podemos ler a poesia de e. e. cummings sem cuspir mensagens de erro.
+Python não é tão tolerante. Se houver um único erro de sintaxe
+em qualquer lugar em seu programa, o Python vai exibir uma mensagem de erro, ele para
+e você não será capaz de executar o programa. Durante as primeiras
 semanas de sua carreira como programador, você provavelmente vai gastar um monte de
-tempo procurando erros de sintaxe. Como você ganhar experiência, você vai
-cometer menos erros e encontrá-los mais rapidamente.
+tempo procurando erros de sintaxe. A medida que você ganha experiência, você
+cometerá menos erros e vai encontrá-los mais rapidamente.
 
-\{Runtime erros} subseção
-\label{} runtime
+\subsection{Erros em tempo de execução}
+\label{tempo de execução}
 
-O segundo tipo de erro é um erro de execução, assim chamado porque o
-erro não aparece até depois o início do programa em execução.
-Esses erros também são chamados de exceções {\bf}, porque eles normalmente
-indicar que algo excepcional (e ruim) aconteceu.
-\index{erro de execução}
-\index{erro! Runtime}
+O segundo tipo de erro é o erro em tempo de execução. Ele é assim chamado porque o
+erro não aparece até que o programa tenha iniciado a execução.
+Estes erros também são chamados de {\bf exceções}, porque eles normalmente
+indicam que algo excepcional (e ruim) aconteceu.
+\index{erro em tempo de execução}
+\index{em temppo de execução!erro}
 \index{exceção}
 \index{linguagem segura}
-\index{língua! Seguro}
+\index{seguro!língua}
 
-Erros de execução são raros nos programas simples que você vai ver na
-primeiros capítulos, por isso pode demorar um pouco até você encontrar um.
+Erros de execução são raros em programas simples os quais você vai ver nos
+primeiros capítulos, por isso pode demorar um pouco até você encontrar um destes erros.
 
 
-\Subsection {erros semânticos}
-\index{} semântica
+\subsection{Erros semânticos}
+\index{semântica}
 \index{erro de semântica}
-\index{erro! Semântica}
+\index{Semântica!erro}
 \index{mensagem de erro}
 
 O terceiro tipo de erro é o {\bf erro de semântica}. Se houver um
-erro de semântica no seu programa, que será executado com êxito no sentido
-que o computador não vai gerar nenhuma mensagem de erro, mas será
-não fazer a coisa certa. Ele vai fazer outra coisa. Especificamente, ele
-vai fazer o que você disse para fazer.
+erro de semântica em seu programa, ele será executado com sucesso no sentido
+que o computador não vai gerar nenhuma mensagem de erro, mas ele
+não fará a coisa certa. Ele vai fazer alguma outra coisa. Especificamente, ele
+vai fazer o que você disse para ele fazer.
 
 O problema é que o programa que você escreveu não é o programa que você
-queria escrever. O significado do programa (sua semântica) é errado.
-Identificar erros semânticos pode ser complicado, pois exige que você trabalhe
-para trás, olhando para a saída do programa e tentando descobrir
+queria escrever. O significado do programa (sua semântica) está errado.
+Identificar erros semânticos pode ser complicado, porque isso exige que você trabalhe
+inversamente, olhando a saída do programa e tentando descobrir
 o que ele está fazendo.
 
-\Subsection {depuração Experimental}
+\subsection{Depuração experimental}
 
 Uma das habilidades mais importantes que você vai adquirir é a de depurar.
-Embora possa ser frustrante, depurar é uma das mais
-partes intelectualmente ricas, desafiadoras e interessantes de
+Embora possa ser frustrante, depurar é uma das
+mais intelectualmente ricas, desafiadoras e interessantes partes da
 programação.
 \index{depuração experimental}
-\index{depuração! Experimental}
+\index{experimental!depuração}
 
-De certa forma, a depuração é como um trabalho de detetive. Você se depara
-com pistas, e você tem que deduzir os processos e eventos que levaram
-com os resultados que você vê.
+Em alguns aspectos, a depuração é como um trabalho de detetive. Você se depara
+com pistas e você tem que deduzir os processos e eventos que levam
+aos resultados que você vê.
 
-Depuração também é como uma ciência experimental. Uma vez que você tem uma idéia
-sobre o que está acontecendo de errado, você modifica o seu programa e tente novamente. Se
-sua hipótese estava correta, então você pode prever o resultado da
-modificação, e você dar um passo mais perto de um programa de trabalho. Se
-sua hipótese estava errada, você tem que vir para cima com um novo. Como
-Sherlock Holmes apontou, `` Quando você tiver eliminado o
-impossível, o que resta, porém improvável, deve ser a verdade.''
-(A. Conan Doyle, {\em The Sign of Four})
+Depuração é também como uma ciência experimental. Uma vez que você tem uma ideia
+sobre o que está acontecendo de errado, você modifica o seu programa e tenta novamente. Se
+sua hipótese estivor correta, então você pode prever o resultado da
+modificação e dar um passo mais perto de um programa funcional. Se
+sua hipótese estiver errada, você tem que aparecer com uma nova. Como
+Sherlock Holmes assinalou, ``Quando você tiver eliminado o
+impossível, tudo que resta, embora improvável, deve ser a verdade.''
+(A. Conan Doyle, {\em O Signo dos Quatro})
 \index{Holmes, Sherlock}
 \index{Doyle, Arthur Conan}
 
